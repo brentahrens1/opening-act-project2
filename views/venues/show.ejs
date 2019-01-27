@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+
+<main>
+
+<h1>show page</h1>
+    Venue Name:<%= venue.name %><br>
+    Gig Info:<%= venue.gigInfo %><br>
+    Address:<%= venue.address %><br>
+    Pay:<%= venue.pay %><br>
+
+    <a class="editBtn" href="/venues/<%= venue._id %>/edit">Edit Venue Profile</a>
+
+    <form action="/venues/<%= venue._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Venue Profile</button>
+</form>
+
+<a href="/">Home</a>
+
+</main>
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>

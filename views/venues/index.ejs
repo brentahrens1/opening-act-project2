@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+
+<h1> Venue index page</h2>
+
+<main>
+
+<ul>
+    <% venues.forEach(function(eachVenue) { %>
+    <li class="bottom"><a href="/venues/<%= eachVenue._id %>">Venue Name: <%= eachVenue.name %></a>, Gig Info: <%= eachVenue.gigInfo %>,Address:  <%= eachVenue.address %>, Pay: <%= eachVenue.pay %></li>
+
+  <%  }) %>
+
+
+</ul>
+
+<a href="/venues/new">New Venue Profile</a>
+<br>
+<br>
+<a href="/">Home</a>
+
+
+</main>
+
+<%- include('../partials/footer') %>

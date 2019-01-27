@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<main>
+
+<h1>Create your Venue profile</h1>
+
+<form action="/venues" method="POST">
+    Venue Name:<input type="text" name="name"><br>
+    Gig Info:<input type="text" name="gigInfo"><br>
+    Address:<input type="text" name="address"><br>
+    Pay:<input type="text" name="pay"><br>
+    <button type="submit">Submit Venue</button>
+</form>
+
+</main>
+
+
+
+
+<%- include('../partials/footer') %>

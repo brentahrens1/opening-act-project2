@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<h1>artist index page</h1>
+
+<main>
+
+<ul>
+    <% artists.forEach(function(eachArtist) { %>
+        <li class="bottom"><a href="/artists/<%= eachArtist._id %>">Name: <%= eachArtist.alias %></a>, Link: <%= eachArtist.link %>,Genre:  <%= eachArtist.genre %>, City: <%= eachArtist.city %></li>
+
+  <%  }) %>
+
+
+</ul>
+
+<a href="/artists/new">New Artists Profile</a>
+<br>
+<br>
+<a href="/">Home</a>
+
+
+</main>
+
+<%- include('../partials/footer') %>

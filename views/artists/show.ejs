@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+
+<main>
+
+<h1>show page</h1>
+    <%= artist.url %><br>
+    Artist Name:<%= artist.alias %><br>
+    Link:<%= artist.link %><br>
+    Bio:<%= artist.bio %><br>
+    Booking Info:<%= artist.bookingInfo %><br>
+    Genre:<%= artist.genre %><br>
+    City:<%= artist.city %><br>
+
+    <a class="editBtn" href="/artists/<%= artist._id %>/edit">Edit Artist Profile</a>
+
+    <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Artist Profile</button>
+</form>
+
+<a href="/">Home</a>
+
+</main>
+
+
+
+
+
+
+<%- include('../partials/footer') %>
