@@ -1,19 +1,19 @@
 <%- include('./partials/header') %>
 
 
-<h1>artist feed or venue feed</h1>
+<h1>OPENING ACT</h1>
 
-<a href="/artists">Artists</a>
+<a href="/artists">Artists</a><br>
 <a href="/venues">Venues</a>
 
-<form action="/" method="POST">
+<form action="/auth/login" method="POST">
   <input type="text" name="username" placeholder="username"><br>
   <input type="email" name="email" placeholder="email"><br>
   <input type="password" name="password" placeholder="password"><br>
   <button type="submit">Log In</button>
 </form>
 <br>
-<form action="/" method="POST">
+<form action="/auth/registration" method="POST">
   <input type="text" name="username" placeholder="username"><br>
   <input type="email" name="email" placeholder="email"><br>
   <input type="password" name="password" placeholder="password"><br>

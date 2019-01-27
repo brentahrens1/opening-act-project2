@@ -9,7 +9,8 @@ const venueSchema = new mongoose.Schema({
     gigInfo: {type: String, required: true},
     address: {type: String, required: true},
     pay: String,
-    artists: [{type: mongoose.Schema.ObjectId, ref: 'Artist'}]
+    artists: [{type: mongoose.Schema.ObjectId, ref: 'Artist'}],
+    accountType: String
 });
 
 const Venue = mongoose.model('Venue', venueSchema); 

@@ -12,7 +12,7 @@ const artistSchema = new mongoose.Schema({
     bookingInfo: {type: String, required: true},
     genre: {type: String, required: true},
     city: {type: String, required: true},
-    artist: Boolean 
+    accountType: String
 })
 
 const Artist = mongoose.model('Artist', artistSchema); 
