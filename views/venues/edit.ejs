@@ -6,10 +6,11 @@
 <h1>Edit your venue profile</h1>
 
 <form action="/venues/<%= venue._id %>?_method=PUT" method="POST">
-    Venue Name:<input type="text" name="name" value="<%= venue.name %>"><br>
-    Gig Info:<input type="text" name="gigInfo" value="<%= venue.gigInfo %>"><br>
-    Address:<input type="text" name="address" value="<%= venue.address %>"><br>
-    Pay:<input type="text" name="pay" value="<%= venue.pay %>"><br>
+    <strong>Venue Name:</strong><input type="text" name="name" value="<%= venue.name %>"><br>
+    <strong>Pic:</strong><input type="text" name="url" value="<%= venue.url %>"><br>
+    <strong>Gig Info:</strong><input type="text" name="gigInfo" value="<%= venue.gigInfo %>"><br>
+    <strong>Address:</strong><input type="text" name="address" value="<%= venue.address %>"><br>
+    <strong>Pay:</strong><input type="text" name="pay" value="<%= venue.pay %>"><br>
     <button type="submit">Edit Venue</button>
 </form><br>
 

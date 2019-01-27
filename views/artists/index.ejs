@@ -6,7 +6,7 @@
 
 <ul>
     <% artists.forEach(function(eachArtist) { %>
-        <li class="bottom"><a href="/artists/<%= eachArtist._id %>">Name: <%= eachArtist.alias %></a>, Link: <%= eachArtist.link %>,Genre:  <%= eachArtist.genre %>, City: <%= eachArtist.city %></li>
+        <li class="bottom"><a href="/artists/<%= eachArtist._id %>"><%= eachArtist.alias %></a><br><strong>Genre:</strong>  <%= eachArtist.genre %><br><strong>City:</strong> <%= eachArtist.city %></li>
 
   <%  }) %>
 

@@ -5,10 +5,11 @@ const venueSchema = new mongoose.Schema({
     username: {type: String,},
     password: {type: String,},
     name: {type: String, required: true},
-    pic: String,
+    url: String,
     gigInfo: {type: String, required: true},
     address: {type: String, required: true},
-    pay: String
+    pay: String,
+    artists: [{type: mongoose.Schema.ObjectId, ref: 'Artist'}]
 });
 
 const Venue = mongoose.model('Venue', venueSchema); 

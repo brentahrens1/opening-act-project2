@@ -7,7 +7,7 @@
 
 <ul>
     <% venues.forEach(function(eachVenue) { %>
-    <li class="bottom"><a href="/venues/<%= eachVenue._id %>">Venue Name: <%= eachVenue.name %></a>, Gig Info: <%= eachVenue.gigInfo %>,Address:  <%= eachVenue.address %>, Pay: <%= eachVenue.pay %></li>
+    <li class="bottom"><a href="/venues/<%= eachVenue._id %>"> <%= eachVenue.name %></a><strong><br>Info:</strong> <%= eachVenue.gigInfo %><strong><br>Address:</strong>  <%= eachVenue.address %><strong><br>Pay:</strong> <%= eachVenue.pay %></li>
 
   <%  }) %>
 

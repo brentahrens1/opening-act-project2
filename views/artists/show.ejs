@@ -4,9 +4,9 @@
 <main>
 
 <h1>show page</h1>
-    <%= artist.url %><br>
-    Artist Name:<%= artist.alias %><br>
-    Link:<%= artist.link %><br>
+    <%= artist.alias %><br>
+    <img width="400" height="250" src="<%= artist.url%>"><br>
+    <iframe width="400" height="250" src="<%=artist.link%>"></iframe><br>
     Bio:<%= artist.bio %><br>
     Booking Info:<%= artist.bookingInfo %><br>
     Genre:<%= artist.genre %><br>

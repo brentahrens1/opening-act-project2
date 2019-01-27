@@ -5,13 +5,13 @@
 <h1>Edit your artist profile</h1>
 
 <form action="/artists/<%= artist._id %>?_method=PUT" method="POST">
-    Atrist Name:<input type="text" name="alias" value="<%= artist.alias %>"><br>
-    Pic:<input type="text" name="url" value="<%= artist.url %>"><br>
-    Link:<input type="text" name="link" value="<%= artist.link %>"><br>
-    Bio:<input type="text" name="bio" value="<%= artist.bio %>"><br>
-    Booking Info:<input type="text" name="bookingInfo" value="<%= artist.bookingInfo %>"><br>
-    Genre:<input type="text" name="genre" value="<%= artist.genre %>"><br>
-    City:<input type="text" name="city" value="<%= artist.city %>"><br><br>
+    <strong>Atrist Name:</strong><input type="text" name="alias" value="<%= artist.alias %>"><br>
+    <strong>Pic:</strong><input type="text" name="url" value="<%= artist.url %>"><br>
+    <strong>Link:</strong><input type="text" name="link" value="<%= artist.link %>"><br>
+    <strong>Bio:</strong><input type="text" name="bio" value="<%= artist.bio %>"><br>
+    <strong>Booking Info:</strong><input type="text" name="bookingInfo" value="<%= artist.bookingInfo %>"><br>
+    <strong>Genre:</strong><input type="text" name="genre" value="<%= artist.genre %>"><br>
+    <strong>City:</strong><input type="text" name="city" value="<%= artist.city %>"><br><br>
     <button type="submit">Edit Artist</button>
 </form><br>
 
