@@ -8,9 +8,12 @@ const Venue = require('../models/venues');
 //registration 
 
 router.post('/registration', async (req, res)=> {
+    
+    console.log(req.body.accountType = req.body.accountType.includes('artists') ? 'artist' : 'venue')
+    console.log(req.body)
     //username
     const username = req.body.username;
-    //password 
+    // //password 
     const password = req.body.password;
     const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 
@@ -21,18 +24,16 @@ router.post('/registration', async (req, res)=> {
 
     newUser.accountType = req.body.accountType === 'artist' ? 'artist' : 'venue';
     try {
-        const createdUser = "";
-        if (accountType === 'artist') {
-            createdUser = await Artist.create(newUser); 
-            } else {
-            createdUser = await Venue.create(newUser); 
-            }
-
-        //create a session 
+        let createdUser = "";
+        // create a session
         req.session.accountType = createdUser.accountType; ; 
         req.session.logged = true; 
-        res.redirect('/auth');
-
+        if (newUser.accountType === 'artist') {
+            // createdUser = await Artist.create(newUser);
+            return res.redirect('/artists/new')
+        } else {
+            return res.redirect('/venues/new') 
+        }
 
     }catch(err) {
         res.send(err);
@@ -43,9 +44,10 @@ router.post('/registration', async (req, res)=> {
 //log in 
 
 router.post('/login', async (req, res) => {
+    req.body.accountType = req.body.accountType.includes('artists') ? 'artist' : 'venue'
     try {
-        const loggedUser = "";
-        if (accountType === 'artist') {
+        let loggedUser = "";
+        if (req.body.accountType === 'artist') {
         loggedUser = await Artist.findOne({username: req.body.username});
         } else {
         loggedUser = await Venue.findOne({username: req.body.username});
@@ -56,7 +58,7 @@ router.post('/login', async (req, res) => {
                 req.session.logged = true; 
                 req.session.username = loggedUser.username; 
                 if (loggedUser.accountType === 'artist') {
-                    res.redirect('/aritsts');
+                    res.redirect('/artists');
                 } else {
                     res.redirect('/venues'); 
                 }

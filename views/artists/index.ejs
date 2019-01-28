@@ -1,24 +1,27 @@
 <%- include('../partials/header') %>
 
-<h1>Search for Artists</h1>
+<header>
+    <h1>OPENING ACT</H1> 
+    <nav>
+        <ul class="nav-bar">
+        <li class="nav-list"><a href="/">Home</a></li>
+        <li class="nav-list"><a href="/venues">Search Venues</a></li>
+        <li class="nav-list"><a href="/artists">Search Artists</a></li>
+        <li class="nav-list"><a href="#">Contact</a></li>
+        <li class="nav-list"><a href="#">About</a></li>
+        <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
+        </ul>
+    </nav>
+</header>
 
 <main>
 
-<ul>
+<ul class="index-details">
     <% artists.forEach(function(eachArtist) { %>
-        <li class="bottom"><a href="/artists/<%= eachArtist._id %>"><%= eachArtist.alias %></a><br><strong>Genre:</strong>  <%= eachArtist.genre %><br><strong>City:</strong> <%= eachArtist.city %></li>
-
+        <li><a href="/artists/<%= eachArtist._id %>"><h2><%= eachArtist.alias %></h2></a><br><img width="400" height="250" src="<%= eachArtist.url%>"><br><strong>Genre:</strong>  <%= eachArtist.genre %><br><strong>City:</strong> <%= eachArtist.city %></li>
   <%  }) %>
 
-
 </ul>
-
-<a href="/artists/new">NEW ARTIST PROFILE</a><br><br>
-<a href="/venues">SEARCH FOR VENUES</a>
-<br>
-<br>
-<a href="/">Home</a>
-
 
 </main>
 

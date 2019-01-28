@@ -1,25 +1,38 @@
 <%- include('./partials/header') %>
 
-
 <h1>OPENING ACT</h1>
+<br>
+<h5>If you're an artist looking for a stage to perform on.<br> 
+    Or a venue in need of up and coming talent.<br>
+    Opening Act is for you!</h5>
+<br>
 
-<a href="/artists">Artists</a><br>
-<a href="/venues">Venues</a>
+<div class="signup-login">
+<p class="signup-login-option"><strong>Artist or Venue?</strong></p><br>
 
 <form action="/auth/login" method="POST">
+<select name="accountType">
+  <option  value="artists">Artist</option>
+  <option  value="venues">Venue</option>
+</select><br><br>
   <input type="text" name="username" placeholder="username"><br>
   <input type="email" name="email" placeholder="email"><br>
-  <input type="password" name="password" placeholder="password"><br>
+  <input type="password" name="password" placeholder="password"><br><br>
   <button type="submit">Log In</button>
 </form>
 <br>
+<p class="signup-login-option"><strong>Artist or Venue?</strong></p><br>
 <form action="/auth/registration" method="POST">
+<select name="accountType">
+  <option  value="artists">Artist</option>
+  <option  value="venues">Venue</option>
+</select><br><br>
   <input type="text" name="username" placeholder="username"><br>
   <input type="email" name="email" placeholder="email"><br>
-  <input type="password" name="password" placeholder="password"><br>
+  <input type="password" name="password" placeholder="password"><br><br>
   <button type="submit">Sign Up</button>
 </form>
-
+</div>
  
 
 

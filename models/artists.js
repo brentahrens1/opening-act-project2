@@ -5,13 +5,13 @@ const artistSchema = new mongoose.Schema({
     username: {type: String},
     password: {type: String},
     email: {type: String},
-    alias: {type: String, required: true},
+    alias: {type: String},
     url: String,
-    link: {type: String, required: true},
+    link: {type: String},
     bio: String, 
-    bookingInfo: {type: String, required: true},
-    genre: {type: String, required: true},
-    city: {type: String, required: true},
+    bookingInfo: {type: String},
+    genre: {type: String},
+    city: {type: String},
     accountType: String
 })
 

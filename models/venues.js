@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 
 const venueSchema = new mongoose.Schema({
-    username: {type: String,},
-    password: {type: String,},
-    name: {type: String, required: true},
+    username: {type: String},
+    password: {type: String},
+    name: {type: String},
     url: String,
-    gigInfo: {type: String, required: true},
-    address: {type: String, required: true},
+    gigInfo: {type: String},
+    address: {type: String},
     pay: String,
     artists: [{type: mongoose.Schema.ObjectId, ref: 'Artist'}],
     accountType: String

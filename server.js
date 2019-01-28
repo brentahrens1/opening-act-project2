@@ -12,7 +12,6 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(express.static('public')); 
 
-app.use('/auth', authController); 
 
 app.use(session({
     secret: "This is a random secret string",
@@ -20,6 +19,7 @@ app.use(session({
     saveUninitialized: false
 }))
 
+app.use('/auth', authController); 
 app.use('/artists', artistController);
 app.use('/venues', venueController);
 

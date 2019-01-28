@@ -1,8 +1,21 @@
 <%- include('../partials/header') %>
 
+<header>
+    <h1>OPENING ACT</H1> 
+    <nav>
+        <ul class="nav-bar">
+        <li class="nav-list"><a href="/">Home</a></li>
+        <li class="nav-list"><a href="/venues">Search Venues</a></li>
+        <li class="nav-list"><a href="/artists">Search Artists</a></li>
+        <li class="nav-list"><a href="#">Contact</a></li>
+        <li class="nav-list"><a href="#">About</a></li>
+        <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
+        </ul>
+    </nav>
+</header>
+
 <main>
 
-<h1>Create your Venue profile</h1>
 
 <form action="/venues" method="POST">
     Venue Name:<input type="text" name="name"><br>
