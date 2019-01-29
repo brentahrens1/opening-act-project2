@@ -1,9 +1,12 @@
 <%- include('../partials/header') %>
 
-<h3>Select Artist or Venue</h3><br><br>
+<div class="move-signup-up">
+<div class="login-flex">
+<div class="input-border-box">
+<h3 class="signup-head">Select Artist or Venue</h3><br>
 
 <div class="select-menu">
-<select name="accountType">
+<select class="select-signup" name="accountType">
   <option  value="artist">Artist</option>
   <option  value="venue">Venue</option>
 </select><br><br>
@@ -15,11 +18,11 @@
     <input type="text" name="password" required placeholder="Password"><br><br>
     <input type="text" name="url" placeholder="Profile Pic URL"><br><br>
     <input type="text" name="link" placeholder="Youtube Link"><br><br>
-    <textarea type="text" name="bio" rows="4" placeholder="Bio"></textarea><br><br>
+    <textarea type="text" name="bio" rows="2" placeholder="Bio"></textarea><br><br>
     <input type="text" name="bookingInfo" placeholder="Booking Info"><br><br>
     <input type="text" name="genre" placeholder="Genre"><br><br>
-    <input type="text" name="city" placeholder="City"><br><br><br>
-    <button type="submit">submit</button>
+    <input type="text" name="city" placeholder="City"><br><br>
+    <button class="signup-btn" type="submit">submit</button>
 </form>
 
 
@@ -28,12 +31,15 @@
     <input type="text" name="password" required placeholder="Password"><br><br>
     <input type="text" name="url" placeholder="Profile Pic URL"><br><br> 
     <input type="text" name="gigInfo" placeholder="Show Info"><br><br>
-    <input type="text" name="address" placeholder="Pay Amount"><br><br>
-    <input type="text" name="pay"><br><br>
-    <button type="submit">Submit Venue</button>
+    <input type="text" name="pay" placeholder="Pay Amount"><br><br>
+    <input type="text" name="genre" placeholder="Genre"><br><br>
+    <input type="text" name="city" placeholder="City"><br><br>
+    <button class="signup-btn" type="submit">Submit</button>
 </form>
 </h2>
-
+</div>
+</div>
+</div>
 <script>
     const select = document.querySelector('select')
     const artistForm = document.querySelector('.artist-form')

@@ -7,20 +7,13 @@ const Venue = require('../models/venues');
 
 //registration
 
-router.post('/registration/:type', async (req, res)=> {
-    req.body.accountType = req.params.type
-    // console.log(req.body.accountType = req.body.account  Type.includes('artists') ? 'artist' : 'venue')
-    console.log(req.body)
-    //username
-    const username = req.body.username;
-    // //password 
-    const password = req.body.password;
-    const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+const convertYouTubeUrl = url =>  `https://www.youtube.com/embed/${url.split('v=')[1]}`
 
-    const newUser = {}; 
-    newUser.username = username; 
-    newUser.password = hashedPassword;
-    newUser.accountType = req.body.accountType === 'artist' ? 'artist' : 'venue';
+router.post('/registration/:type', async (req, res)=> {
+    const newUser = req.body
+    newUser.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+    newUser.accountType = req.params.type === 'artist' ? 'artist' : 'venue';
+    newUser.link = convertYouTubeUrl(req.body.link)
     try {
         // create a session
         req.session.accountType = newUser.accountType; ; 

@@ -8,6 +8,7 @@ const bcrypt  = require('bcryptjs');
  
 router.get('/', (req, res) => {
     Artist.find({}, (err, allArtist) => {
+        console.log(allArtist)
         if(err) {
             res.send(arr);
         } else {
@@ -67,7 +68,7 @@ router.put('/:id', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Artist.findById(req.params.id, (err, foundArtist) => {
-        console.log(res.locals)
+        console.log('this is the art' + foundArtist)
         if(err) {
             res.send(err);
         } else {
