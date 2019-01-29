@@ -78,8 +78,8 @@ a:visited {
 
 .show-info {
   font-size: 1.5rem;
-  margin-left: 206px;
-  margin-top: 20px; }
+  margin-left: 20.6rem;
+  margin-top: 2rem; }
 
 .main-index-header {
   text-align: center;
@@ -97,7 +97,7 @@ a:visited {
   align-items: center; }
 
 .signup-login-main {
-  margin-top: 40px; }
+  margin-top: 4rem; }
 
 .page-header {
   text-align: center;
@@ -154,24 +154,24 @@ button:active {
   outline: none; }
 
 .home-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .home-btn:active {
-  transform: translateY(-1px);
+  transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .show-profile {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-right: 103px; }
+  margin-right: 10.3rem; }
 
 .show-profile2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-right: 187px; }
+  margin-right: 18.7rem; }
 
 .btn-center {
   display: flex;
@@ -180,14 +180,14 @@ button:active {
   align-items: center; }
 
 .edit-delete-btn {
-  width: 130px; }
+  width: 13rem; }
 
 .login-flex {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px; }
+  margin-top: 10rem; }
 
 .input-style {
   width: 18rem;
@@ -196,11 +196,11 @@ button:active {
   border-radius: 5%; }
 
 .login-btn {
-  width: 140px;
-  margin-left: 20px; }
+  width: 14rem;
+  margin-left: 2rem; }
 
 .select-menu {
-  margin-left: 30px; }
+  margin-left: 3rem; }
 
 .input-border-box {
   border: .1rem solid black;

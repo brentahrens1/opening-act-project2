@@ -20,10 +20,10 @@
         <iframe width="400" height="250" src="<%=artist.link%>"></iframe><br>
     </div>
     <div class="show-info">
-        Bio:<%= artist.bio %><br>
-        Booking Info:<%= artist.bookingInfo %><br>
-        Genre:<%= artist.genre %><br>
-        City:<%= artist.city %><br><br>
+        <%= artist.bio %><br>
+        Contact: <%= artist.bookingInfo %><br>
+        Genre: <%= artist.genre %><br>
+        City: <%= artist.city %><br><br>
     </div>
         <% if (currentUser.username == artist.username) { %> 
     <div class="btn-center">

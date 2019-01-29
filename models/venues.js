@@ -5,7 +5,7 @@ const venueSchema = new mongoose.Schema({
     username: {type: String},
     password: {type: String},
     name: {type: String},
-    VenueUrl: {type:String},
+    url: {type:String},
     gigInfo: {type: String},
     address: {type: String},
     pay: String,

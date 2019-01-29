@@ -13,7 +13,8 @@ router.post('/registration/:type', async (req, res)=> {
     const newUser = req.body
     newUser.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     newUser.accountType = req.params.type === 'artist' ? 'artist' : 'venue';
-    newUser.link = convertYouTubeUrl(req.body.link)
+    console.log(req.body)
+    newUser.link = req.body.link && convertYouTubeUrl(req.body.link)
     try {
         // create a session
         req.session.accountType = newUser.accountType; ; 

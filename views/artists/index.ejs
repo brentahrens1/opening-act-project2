@@ -16,7 +16,7 @@
 <main>
 <ul class="index-details">
     <% artists.forEach(function(eachArtist) { %>
-        <li><a href="/artists/<%= eachArtist._id %>"><br><img class="index-photo" width="400" height="250" src="<%= eachArtist.url%>"><br><br><%= eachArtist.city %></a></li>
+        <li><a href="/artists/<%= eachArtist._id %>"><br><img class="index-photo" width="400" height="270" src="<%= eachArtist.url%>"><br><%= eachArtist.city %></a></li>
   <%  }) %>
 
 </ul>
