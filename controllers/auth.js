@@ -5,11 +5,11 @@ const Artist = require('../models/artists');
 const Venue = require('../models/venues');
 
 
-//registration 
+//registration
 
-router.post('/registration', async (req, res)=> {
-    
-    console.log(req.body.accountType = req.body.accountType.includes('artists') ? 'artist' : 'venue')
+router.post('/registration/:type', async (req, res)=> {
+    req.body.accountType = req.params.type
+    // console.log(req.body.accountType = req.body.account  Type.includes('artists') ? 'artist' : 'venue')
     console.log(req.body)
     //username
     const username = req.body.username;
@@ -19,20 +19,34 @@ router.post('/registration', async (req, res)=> {
 
     const newUser = {}; 
     newUser.username = username; 
-
-    newUser.password = hashedPassword; 
-
+    newUser.password = hashedPassword;
     newUser.accountType = req.body.accountType === 'artist' ? 'artist' : 'venue';
     try {
-        let createdUser = "";
         // create a session
-        req.session.accountType = createdUser.accountType; ; 
-        req.session.logged = true; 
+        req.session.accountType = newUser.accountType; ; 
+        req.session.logged = true;
+        req.session.username = newUser.username;
+        req.session.user = newUser
         if (newUser.accountType === 'artist') {
-            // createdUser = await Artist.create(newUser);
-            return res.redirect('/artists/new')
+            //create artist
+            Artist.create(newUser, (err, createdArtist)=> {
+                if(err) {
+                    res.send(err)
+                } else {
+                    res.redirect('/artists')
+                }
+            })
+            
+            
         } else {
-            return res.redirect('/venues/new') 
+            // create venue 
+            Venue.create(newUser, (err, createdVenue)=> {
+                if(err) {
+                    res.send(err)
+                } else {
+                    res.redirect('/venues')
+                }
+            })
         }
 
     }catch(err) {
@@ -56,6 +70,7 @@ router.post('/login', async (req, res) => {
             if(bcrypt.compareSync(req.body.password, loggedUser.password)) {
                 req.session.message = "";
                 req.session.logged = true; 
+                req.session.user = loggedUser; 
                 req.session.username = loggedUser.username; 
                 if (loggedUser.accountType === 'artist') {
                     res.redirect('/artists');

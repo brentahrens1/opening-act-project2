@@ -1,16 +1,14 @@
 <%- include('../partials/header') %>
 
+<h1 class="page-header">OPENING ACT</h1><br><br>
 <header>
-    <h1>OPENING ACT</H1> 
     <nav>
-        <ul class="nav-bar">
+    <ul class="nav-bar">
         <li class="nav-list"><a href="/">Home</a></li>
-        <li class="nav-list"><a href="/venues">Search Venues</a></li>
-        <li class="nav-list"><a href="/artists">Search Artists</a></li>
-        <li class="nav-list"><a href="#">Contact</a></li>
-        <li class="nav-list"><a href="#">About</a></li>
+        <li class="nav-list"><a href="/venues">Venues</a></li>
+        <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
-        </ul>
+    </ul>
     </nav>
 </header>
 
@@ -18,19 +16,10 @@
 
 <ul class="index-details">
     <% venues.forEach(function(eachVenue) { %>
-    <li class="bottom"><a href="/venues/<%= eachVenue._id %>"><h2><%= eachVenue.name %></h2></a><strong><br><img width="400" height="250" src="<%= eachVenue.url%>"><br>Info:</strong> <%= eachVenue.gigInfo %><strong><br>Address:</strong>  <%= eachVenue.address %><strong><br>Pay:</strong> <%= eachVenue.pay %></li>
+    <li class="bottom"><a href="/venues/<%= eachVenue._id %>"><h2><%= eachVenue.name %></h2><strong><br><img class="index-photo" width="400" height="250" src="<%= eachVenue.url%>"><br>Info:</strong> <%= eachVenue.gigInfo %><strong><br>Address:</strong>  <%= eachVenue.address %><strong><br>Pay:</strong> <%= eachVenue.pay %></a></li>
   <%  }) %>
 
 </ul>
-
-<a href="/venues/new">NEW VENUE PROFILE</a><br><br>
-<a href="/artists">SEARCH ARTISTS</a>
-
-<br>
-<br>
-<a href="/">Home</a>
-
-
 
 
 </main>

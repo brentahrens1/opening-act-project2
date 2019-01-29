@@ -1,38 +1,29 @@
 <%- include('./partials/header') %>
 
-<h1>OPENING ACT</h1>
-<br>
-<h5>If you're an artist looking for a stage to perform on.<br> 
-    Or a venue in need of up and coming talent.<br>
-    Opening Act is for you!</h5>
-<br>
+<header>
+    <h1 class="main-index-header">OPENING ACT</H1> 
 
-<div class="signup-login">
-<p class="signup-login-option"><strong>Artist or Venue?</strong></p><br>
-
-<form action="/auth/login" method="POST">
-<select name="accountType">
-  <option  value="artists">Artist</option>
-  <option  value="venues">Venue</option>
-</select><br><br>
-  <input type="text" name="username" placeholder="username"><br>
-  <input type="email" name="email" placeholder="email"><br>
-  <input type="password" name="password" placeholder="password"><br><br>
-  <button type="submit">Log In</button>
-</form>
 <br>
-<p class="signup-login-option"><strong>Artist or Venue?</strong></p><br>
-<form action="/auth/registration" method="POST">
-<select name="accountType">
-  <option  value="artists">Artist</option>
-  <option  value="venues">Venue</option>
-</select><br><br>
-  <input type="text" name="username" placeholder="username"><br>
-  <input type="email" name="email" placeholder="email"><br>
-  <input type="password" name="password" placeholder="password"><br><br>
-  <button type="submit">Sign Up</button>
-</form>
+<div class="flex-main-index">
+  <h5>If you're an artist looking for a stage to perform on.<br> 
+      Or a venue in need of up and coming talent.<br>
+      Opening Act is for you!</h5>
+  <br>
+
+  <div class="signup-login-main">
+  <div class="signup">
+    <button class="home-btn"><a href="/signup">Sign Up</a></button>
+  </div>
+    <br>
+  <div class="login">
+    <button class="home-btn"><a href="/login">Log In</a></button>
+  </div>
 </div>
+</div>
+
+
+
+
  
 
 

@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<div class="login-flex">
+<div class="input-border-box">
+  <h3 class="login-head">Select Artist or Venue</h3><br>
+
+    <form action="/auth/login" method="POST">
+      <select class="select-menu" name="accountType">
+        <option value="artists">Artist</option>
+        <option value="venues">Venue</option>
+      </select><br><br><br>
+        <input class="input-style" type="text" name="username" placeholder="username"><br><br>
+        <input class="input-style" type="password" name="password" placeholder="password"><br><br><br>
+      <button class="login-btn" type="submit">Log In</button>
+    </form>
+</div>
+</div>
+<%- include('../partials/footer') %>

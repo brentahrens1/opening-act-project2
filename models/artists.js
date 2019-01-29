@@ -6,7 +6,7 @@ const artistSchema = new mongoose.Schema({
     password: {type: String},
     email: {type: String},
     alias: {type: String},
-    url: String,
+    url: {type:String},
     link: {type: String},
     bio: String, 
     bookingInfo: {type: String},

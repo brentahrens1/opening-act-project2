@@ -1,32 +1,31 @@
 <%- include('../partials/header') %>
 
+<h1 class="page-header">OPENING ACT</h1>
 <header>
-    <h1>OPENING ACT</H1> 
     <nav>
-        <ul class="nav-bar">
+    <ul class="nav-bar">
         <li class="nav-list"><a href="/">Home</a></li>
-        <li class="nav-list"><a href="/venues">Search Venues</a></li>
-        <li class="nav-list"><a href="/artists">Search Artists</a></li>
-        <li class="nav-list"><a href="#">Contact</a></li>
-        <li class="nav-list"><a href="#">About</a></li>
+        <li class="nav-list"><a href="/venues">Venues</a></li>
+        <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
-        </ul>
+        <li class="nav-list"><a href="#">Contact</a></li>
+    </ul>
     </nav>
 </header>
 
-
 <main>
 
-<form action="/artists" method="POST">
-    Artist Name:<input type="text" name="alias"><br>
-    Pic:<input type="text" name="url"><br>  
-    Link:<input type="text" name="link"><br>
-    Bio:<input type="text" name="bio"><br>
-    Booking Info:<input type="text" name="bookingInfo"><br>
-    Genre:<input type="text" name="genre"><br>
-    City:<input type="text" name="city"><br>
-    <button type="submit">submit</button>
-</form>
+
+    <form action="/artists" method="POST">
+        Artist Name:<input type="text" name="username" value="<%=newUser.username %>"><br>
+        Pic:<input type="text" name="url"><br>  
+        Link:<input type="text" name="link"><br>
+        Bio:<input type="text" name="bio"><br>
+        Booking Info:<input type="text" name="bookingInfo"><br>
+        Genre:<input type="text" name="genre"><br>
+        City:<input type="text" name="city"><br>
+        <button type="submit">submit</button>
+    </form>
 
 </main>
 

@@ -67,11 +67,15 @@ router.put('/:id', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Artist.findById(req.params.id, (err, foundArtist) => {
+        console.log(res.locals)
         if(err) {
             res.send(err);
         } else {
             res.render('../views/artists/show.ejs', 
-            {artist: foundArtist}); 
+            {
+                artist: foundArtist,
+                loggedUserName: req.session.username
+            }); 
             
         }
     })

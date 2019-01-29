@@ -8,9 +8,12 @@ const venueController = require('./controllers/venues');
 const session  = require('express-session');
 const authController = require('./controllers/auth')
 
+app.set('view engine', 'ejs')
+
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: true})); 
-app.use(express.static('public')); 
+app.use(express.static('public'));
+
 
 
 app.use(session({
@@ -19,9 +22,21 @@ app.use(session({
     saveUninitialized: false
 }))
 
+app.use((req,res, next)=>{
+    res.locals.currentUser = req.session
+    next()
+})
 app.use('/auth', authController); 
 app.use('/artists', artistController);
 app.use('/venues', venueController);
+
+app.get('/login', (req, res)=> {
+    res.render('auth/login'); 
+})
+
+app.get('/signup', (req, res)=> {
+    res.render('auth/signup'); 
+})
 
 app.get('/', (req, res) => {
     res.render('index.ejs')

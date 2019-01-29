@@ -1,38 +1,38 @@
 <%- include('../partials/header') %>
 
-
+<h1 class="page-header">OPENING ACT</h1> 
 <header>
-    <h1>OPENING ACT</H1> 
     <nav>
-        <ul class="nav-bar">
+    <ul class="nav-bar">
         <li class="nav-list"><a href="/">Home</a></li>
-        <li class="nav-list"><a href="/venues">Search Venues</a></li>
-        <li class="nav-list"><a href="/artists">Search Artists</a></li>
-        <li class="nav-list"><a href="#">Contact</a></li>
-        <li class="nav-list"><a href="#">About</a></li>
+        <li class="nav-list"><a href="/venues">Venues</a></li>
+        <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
-        </ul>
+        <li class="nav-list"><a href="#">Contact</a></li>
+    </ul>
     </nav>
 </header>
 
 <main>
-
-
-    <h1><%= artist.alias %></h1><br>
-    <img width="400" height="250" src="<%= artist.url%>"><br>
-    <iframe width="400" height="250" src="<%=artist.link%>"></iframe><br>
-    Bio:<%= artist.bio %><br>
-    Booking Info:<%= artist.bookingInfo %><br>
-    Genre:<%= artist.genre %><br>
-    City:<%= artist.city %><br>
-
-    <a class="editBtn" href="/artists/<%= artist._id %>/edit">Edit Artist Profile</a>
-
-    <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST">
-    <button type="submit">Delete Artist Profile</button>
-</form>
-
-<a href="/">Home</a>
+    <div class="show-profile">
+        <h1><%= artist.alias %></h1><br>
+        <img width="400" height="250" src="<%= artist.url%>"><br>
+        <iframe width="400" height="250" src="<%=artist.link%>"></iframe><br>
+    </div>
+    <div class="show-info">
+        Bio:<%= artist.bio %><br>
+        Booking Info:<%= artist.bookingInfo %><br>
+        Genre:<%= artist.genre %><br>
+        City:<%= artist.city %><br><br>
+    </div>
+        <% if (currentUser.username == artist.username) { %> 
+    <div class="btn-center">
+        <button class="edit-delete-btn"><a class="editBtn" href="/artists/<%= artist._id %>/edit"></a>Edit Profile</button>
+        <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST"><br>
+        <button class="edit-delete-btn" type="submit">Delete Profile</button>
+    </div>
+    </form>
+    <%}%>
 
 </main>
 
