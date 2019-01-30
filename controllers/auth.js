@@ -28,7 +28,7 @@ router.post('/registration/:type', async (req, res)=> {
                     res.send(err)
                 } else {
                     req.session.userId = createdArtist._id
-                    res.redirect('/artists')
+                    res.redirect(`/artists/${createdArtist._id}`)
                 }
             })
             
@@ -39,7 +39,7 @@ router.post('/registration/:type', async (req, res)=> {
                 if(err) {
                     res.send(err)
                 } else {
-                    res.redirect('/venues')
+                    res.redirect(`/venues/${createdVenue._id}`)
                 }
             })
         }

@@ -9,6 +9,8 @@ const artistSchema = new mongoose.Schema({
     url: {type:String},
     link: {type: String},
     bio: String, 
+    instagram: String,
+    twitter: String,
     bookingInfo: {type: String},
     genre: {type: String},
     city: {type: String},

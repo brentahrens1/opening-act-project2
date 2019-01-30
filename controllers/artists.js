@@ -86,7 +86,7 @@ router.get('/:id', (req, res) => {
 //delete
 
 router.delete('/:id', (req, res) => {
-    Artist.findOneAndRemove(req.params.id, (err, deletedArtist) => {
+    Artist.findByIdAndDelete(req.params.id, (err, deletedArtist) => {
         if(err) {
             res.send(err); 
         } else {
@@ -95,6 +95,16 @@ router.delete('/:id', (req, res) => {
         }
     })
 }); 
+
+//serch 
+
+router.post('/search', (req, res) => {
+    Artist.find({city: req.body.query}, (err, artists) => {
+        res.render('../views/artists/index.ejs', {
+            artists
+        }); 
+    })
+})
 
 
 

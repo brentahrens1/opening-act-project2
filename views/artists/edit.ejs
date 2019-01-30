@@ -4,7 +4,9 @@
 <header>
     <nav>
     <ul class="nav-bar">
-        <li class="nav-list"><a href="/">Home</a></li>
+        <form method="POST" action="/artists/search">
+            <input type="text" name="query" placeholder="City">
+        </form>
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
@@ -15,16 +17,20 @@
 <main>
 
 <div class="edit-flex">
+<div class="input-border-box">
     <form action="/artists/<%= artist._id %>?_method=PUT" method="POST">
-        <input type="text" name="alias" value="<%= artist.alias %>" placeholder="Artist Name"><br>
-        <input type="text" name="url" value="<%= artist.url %>" placeholder="Proile Picture"><br>
-        <input type="text" name="link" value="<%= artist.link %>" placeholder="Youtube URL"><br>
-        <input type="text" name="bio" value="<%= artist.bio %>" placeholder="Bio"><br>
-        <input type="text" name="bookingInfo" value="<%= artist.bookingInfo %>" placeholder="Booking Email"><br>
-        <input type="text" name="genre" value="<%= artist.genre %>" placeholder="Genre"><br>
+        <input type="text" name="username" value="<%= artist.username %>" placeholder="Artist Name"><br><br>
+        <input type="text" name="url" value="<%= artist.url %>" placeholder="Proile Picture"><br><br>
+        <input type="text" name="link" value="<%= artist.link %>" placeholder="Youtube URL"><br><br>
+        <textarea type="text" name="bio" value="<%= artist.bio %>" placeholder="Bio" rows="3"></textarea><br><br>
+        <input type="text" name="bookingInfo" value="<%= artist.bookingInfo %>" placeholder="Booking Email"><br><br>
+        <input type="text" name="genre" value="<%= artist.genre %>" placeholder="Genre"><br><br>
         <input type="text" name="city" value="<%= artist.city %>" placeholder="City"><br><br>
-        <button type="submit">Edit Artist</button>
+        <div class="edit-prof-btn">
+        <button type="submit">Edit Profile</button>
+        </div>
     </form><br>
+</div>
 </div>
 
 </main>

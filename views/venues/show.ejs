@@ -3,7 +3,9 @@
 <header>
     <nav>
     <ul class="nav-bar">
-        <li class="nav-list"><a href="/">Home</a></li>
+        <form method="POST" action="/artists/search">
+            <input type="text" name="query" placeholder="City">
+        </form>
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>

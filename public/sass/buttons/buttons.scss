@@ -1,0 +1,64 @@
+.info-btns {
+    display: flex; 
+    flex-direction: row; 
+}
+
+button{
+    color: black; 
+    width: 10rem; 
+    height: 3rem; 
+    border-radius: 10rem; 
+    font-size: 1.5rem; 
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    outline: none;    
+}
+
+.edit-prof-btn {
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+button:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  
+button:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.home-btn {
+    color: black; 
+    padding: .5rem; 
+    width: 13rem; 
+    height: 4rem; 
+    border-radius: 10rem; 
+    font-size: 1.5rem;
+    border: 1px solid black; 
+    box-shadow:  -.3rem .3rem 1.5rem rgba(0,0,0,.3);
+    text-align: center;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    outline: none; 
+}
+
+.signup-login-after:visited {
+    color: black;
+}
+
+.home-btn:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  
+.home-btn:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn-center {
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-right: 2rem;
+    margin-top: 8rem;
+    }

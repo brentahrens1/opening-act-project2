@@ -6,6 +6,8 @@ const venueSchema = new mongoose.Schema({
     password: {type: String},
     name: {type: String},
     url: {type:String},
+    instagram: {type:String},
+    twitter: {type:String},
     gigInfo: {type: String},
     address: {type: String},
     pay: String,

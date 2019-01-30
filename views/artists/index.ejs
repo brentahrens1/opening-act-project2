@@ -4,7 +4,9 @@
 <header>
     <nav>
     <ul class="nav-bar">
-        <li class="nav-list"><a href="/">Home</a></li>
+        <form method="POST" action="/artists/search">
+            <input type="text" name="query" placeholder="City">
+        </form>
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
@@ -13,7 +15,7 @@
 </header>
 
 <main>
-<ul class="index-details">
+    <ul class="index-details">
     <% artists.forEach(function(eachArtist) { %>
         <li><a href="/artists/<%= eachArtist._id %>"><br>
         <div class="flip-card">
@@ -22,7 +24,7 @@
         <img class="index-photo" width="400" height="270" src="<%= eachArtist.url%>"><br>
         </div>
         <div class="flip-card-back">
-        <h1><%= eachArtist.alias %></h1> 
+        <h1><%= eachArtist.username %></h1> 
         <p><%= eachArtist.bio %></p> 
         <p><%= eachArtist.genre %></p>
         <p><%= eachArtist.city %></p>

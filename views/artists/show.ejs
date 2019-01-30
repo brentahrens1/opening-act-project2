@@ -4,7 +4,9 @@
 <header>
     <nav>
     <ul class="nav-bar">
-        <li class="nav-list"><a href="/">Home</a></li>
+        <form method="POST" action="/artists/search">
+            <input type="text" name="query" placeholder="City">
+        </form>
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
@@ -19,8 +21,11 @@
         <br>
         <br>
         <br>
-        <%= artist.alias %><br>
-        booking: <%= artist.bookingInfo %><br>
+        <h2><%= artist.username %></h2><br>
+        Bio: <%= artist.bio %><br>
+        Instagram: <%= artist.instagram %><br>
+        Twitter: <%= artist.twitter %><br>
+        contact: <%= artist.bookingInfo %><br> 
         genre: <%= artist.genre %><br>
         city: <%= artist.city %>
         </div>
@@ -30,11 +35,10 @@
         
         <% if (loggedUserId == artist._id) { %> 
     <div class="btn-center">
+        <a href="/artists/<%= artist._id %>/edit"><div class="editBtn"><button class="edit-delete-btn">Edit Profile</button></div></a>
         <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST"><br>
         <button class="edit-delete-btn" type="submit">Delete Profile</button>    
     </form><br>
-    
-    <a href="/artists/<%= artist._id %>/edit"><div class="editBtn"><button class="edit-delete-btn">Edit Profile</button></div></a>
     <%}%>
     </div>
 </main>
