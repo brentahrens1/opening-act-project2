@@ -8,32 +8,35 @@
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
-        <li class="nav-list"><a href="#">Contact</a></li>
     </ul>
     </nav>
 </header>
 
 <main>
     <div class="show-profile">
-        <h1><%= artist.alias %></h1><br>
-        <img width="400" height="250" src="<%= artist.url%>"><br>
-        <iframe width="400" height="250" src="<%=artist.link%>"></iframe><br>
-    </div>
-    <div class="show-info">
-        <%= artist.bio %><br>
-        Contact: <%= artist.bookingInfo %><br>
-        Genre: <%= artist.genre %><br>
-        City: <%= artist.city %><br><br>
-    </div>
-        <% if (currentUser.username == artist.username) { %> 
+    <div class="show-column">
+        <div class="show-info-font">
+        <br>
+        <br>
+        <br>
+        <%= artist.alias %><br>
+        booking: <%= artist.bookingInfo %><br>
+        genre: <%= artist.genre %><br>
+        city: <%= artist.city %>
+        </div>
+        </div>
+        <iframe class="show-radius" width="600" height="400" src="<%=artist.link%>"></iframe><br>
+    </div> 
+        
+        <% if (loggedUserId == artist._id) { %> 
     <div class="btn-center">
-        <button class="edit-delete-btn"><a class="editBtn" href="/artists/<%= artist._id %>/edit"></a>Edit Profile</button>
         <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST"><br>
-        <button class="edit-delete-btn" type="submit">Delete Profile</button>
-    </div>
-    </form>
+        <button class="edit-delete-btn" type="submit">Delete Profile</button>    
+    </form><br>
+    
+    <a href="/artists/<%= artist._id %>/edit"><div class="editBtn"><button class="edit-delete-btn">Edit Profile</button></div></a>
     <%}%>
-
+    </div>
 </main>
 
 

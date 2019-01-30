@@ -27,6 +27,7 @@ router.post('/registration/:type', async (req, res)=> {
                 if(err) {
                     res.send(err)
                 } else {
+                    req.session.userId = createdArtist._id
                     res.redirect('/artists')
                 }
             })
@@ -66,6 +67,7 @@ router.post('/login', async (req, res) => {
                 req.session.logged = true; 
                 req.session.user = loggedUser; 
                 req.session.username = loggedUser.username; 
+                req.session.userId = loggedUser._id; 
                 if (loggedUser.accountType === 'artist') {
                     res.redirect('/artists');
                 } else {

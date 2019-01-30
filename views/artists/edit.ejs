@@ -8,27 +8,24 @@
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
-        <li class="nav-list"><a href="#">Contact</a></li>
     </ul>
     </nav>
 </header>
 
 <main>
 
-
-<form action="/artists/<%= artist._id %>?_method=PUT" method="POST">
-    <strong>Atrist Name:</strong><input type="text" name="alias" value="<%= artist.alias %>"><br>
-    <strong>Pic:</strong><input type="text" name="url" value="<%= artist.url %>"><br>
-    <strong>Link:</strong><input type="text" name="link" value="<%= artist.link %>"><br>
-    <strong>Bio:</strong><input type="text" name="bio" value="<%= artist.bio %>"><br>
-    <strong>Booking Info:</strong><input type="text" name="bookingInfo" value="<%= artist.bookingInfo %>"><br>
-    <strong>Genre:</strong><input type="text" name="genre" value="<%= artist.genre %>"><br>
-    <strong>City:</strong><input type="text" name="city" value="<%= artist.city %>"><br><br>
-    <button type="submit">Edit Artist</button>
-</form><br>
-
-<a href="/artists">Home</a>
-
+<div class="edit-flex">
+    <form action="/artists/<%= artist._id %>?_method=PUT" method="POST">
+        <input type="text" name="alias" value="<%= artist.alias %>" placeholder="Artist Name"><br>
+        <input type="text" name="url" value="<%= artist.url %>" placeholder="Proile Picture"><br>
+        <input type="text" name="link" value="<%= artist.link %>" placeholder="Youtube URL"><br>
+        <input type="text" name="bio" value="<%= artist.bio %>" placeholder="Bio"><br>
+        <input type="text" name="bookingInfo" value="<%= artist.bookingInfo %>" placeholder="Booking Email"><br>
+        <input type="text" name="genre" value="<%= artist.genre %>" placeholder="Genre"><br>
+        <input type="text" name="city" value="<%= artist.city %>" placeholder="City"><br><br>
+        <button type="submit">Edit Artist</button>
+    </form><br>
+</div>
 
 </main>
 

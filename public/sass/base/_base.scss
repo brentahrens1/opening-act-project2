@@ -50,9 +50,13 @@ h5 {
 .nav-list:hover {
     opacity: .6;
     border-radius:5%; 
-    background-color: #fff;
+    background-color: #000;
 }
 
+.info-btns {
+    display: flex; 
+    flex-direction: row; 
+}
 
 .nav-list {
     padding: 5px; 
@@ -64,7 +68,7 @@ a{
 }
 
 a:visited {
-    color: black; 
+    color: #fff; 
 }
 
 .singup-login {
@@ -94,7 +98,24 @@ a:visited {
 
 .index-photo {
    border: 1px solid black; 
+   border-radius: 2%; 
    box-shadow:  0 2rem 6rem rgba(0,0,0,.3);
+}
+
+.show-radius {
+border: 1px solid black; 
+   border-radius: 2%; 
+   box-shadow:  0 2rem 6rem rgba(0,0,0,.3);
+}
+
+.show-column {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.show-info-font {
+    font-size: 2.2rem; 
+    text-transform: capitalize;
 }
 
 .show-info {
@@ -161,6 +182,8 @@ button{
     outline: none;    
 }
 
+
+
 button:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -184,6 +207,10 @@ button:active {
     outline: none; 
 }
 
+.signup-login-after:visited {
+    color: black;
+}
+
 .home-btn:hover {
     transform: translateY(-.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -195,8 +222,8 @@ button:active {
 .show-profile {
     display: flex; 
     flex-direction: row; 
-    justify-content: space-around; 
-    margin-right: 10.3rem;
+    justify-content: space-evenly; 
+    margin-right: -6.7rem;
 }
 
 .show-profile2 {
@@ -211,10 +238,14 @@ button:active {
     justify-content: center; 
     flex-direction: column; 
     align-items: center; 
+    margin-right: 2rem;
+    margin-top: 8rem;
 }
 
 .edit-delete-btn {
-    width: 13rem; 
+    width: 14rem; 
+    height:4rem; 
+    
 }
 
 .login-flex {
@@ -225,11 +256,20 @@ button:active {
     margin-top: 10rem; 
 }
 
+.edit-flex {
+    display:flex; 
+    padding: .5rem; 
+    justify-content: center; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 10rem; 
+}
+
 .input-style {
     width: 18rem; 
     height: 3.5rem; 
     border: 0px solid black;
-    border-radius: 5%; 
+    border-radius: 2%; 
 }
 
 .login-btn {
@@ -273,6 +313,47 @@ button:active {
 .move-signup-up {
     margin-bottom: 4rem; 
 }
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 270px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    z-index: 2;
+  }
+  
+  .flip-card-back {
+    background-color: #297fb985;
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
 
 @keyframes moveInLeft {
     0% {

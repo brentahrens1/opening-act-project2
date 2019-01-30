@@ -14,20 +14,22 @@
 <main>
     <div class="show-profile2">
         <h1><%= venue.name %></h1><br>
-        <img width="400" height="250" src="<%= venue.url%>"><br>
+        <img  class="show-radius" width="400" height="250" src="<%= venue.url%>"><br>
     </div>
     <div class="show-info">
         Info:<%= venue.gigInfo %><br>
         Address:<%= venue.address %><br>
         Pay:<%= venue.pay %><br>
-    </div>
-    <div class="btn-center">        
-        <button class="edit-delete-btn"><a class="editBtn" href="/venues/<%= venue._id %>/edit"></a>Edit Profile</button>
-        <form action="/venues/<%= venue._id %>?_method=DELETE" method="POST"><br>
-        <button class="edit-delete-btn"  type="submit">Delete Profile</button>
-    </form>
-    </div>
-</main>
+        <% if (currentUser.username == venue.username) { %> 
+        <div class="btn-center">
+            <form action="/venues/<%= venue._id %>?_method=DELETE" method="POST"><br>
+            <button class="edit-delete-btn" type="submit">Delete Profile</button>    
+        </form><br>
+        
+        <a href="/venues/<%= venue._id %>/edit"><div class="editBtn"><button class="edit-delete-btn">Edit Profile</button></div></a>
+        <%}%>
+        </div>
+    </main>
 
 
 

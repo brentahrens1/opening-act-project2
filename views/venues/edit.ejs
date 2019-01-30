@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h1> class="page-header">OPENING ACT</h1>
+<h1 class="page-header">OPENING ACT</h1>
 <header>
     <nav>
     <ul class="nav-bar">
@@ -8,24 +8,21 @@
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
-        <li class="nav-list"><a href="#">Contact</a></li>
     </ul>
     </nav>
 </header>
 
 <main>
-
+<div class="edit-flex">
 <form action="/venues/<%= venue._id %>?_method=PUT" method="POST">
-    <strong>Venue Name:</strong><input type="text" name="name" value="<%= venue.name %>"><br>
-    <strong>Pic:</strong><input type="text" name="url" value="<%= venue.url %>"><br>
-    <strong>Gig Info:</strong><input type="text" name="gigInfo" value="<%= venue.gigInfo %>"><br>
-    <strong>Address:</strong><input type="text" name="address" value="<%= venue.address %>"><br>
-    <strong>Pay:</strong><input type="text" name="pay" value="<%= venue.pay %>"><br>
+    <input type="text" name="name" value="<%= venue.name %>" placeholder="Venue Name"><br>
+    <input type="text" name="url" value="<%= venue.url %>" placeholder="URL"><br>
+    <input type="text" name="gigInfo" value="<%= venue.gigInfo %>" placeholder="Gig Info"><br>
+    <input type="text" name="address" value="<%= venue.address %>" placeholder="Address"><br>
+    <input type="text" name="pay" value="<%= venue.pay %>" placeholder="Pay Amount"><br><br>
     <button type="submit">Edit Venue</button>
 </form><br>
-
-<a href="/">Home</a>
-
+</div>
 
 </main>
 

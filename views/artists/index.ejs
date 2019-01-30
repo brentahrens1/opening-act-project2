@@ -8,7 +8,6 @@
         <li class="nav-list"><a href="/venues">Venues</a></li>
         <li class="nav-list"><a href="/artists">Artists</a></li>
         <li class="nav-list"><a href="/auth/logout">Log Out</a></li>
-        <li class="nav-list"><a href="#">Contact</a></li>
     </ul>
     </nav>
 </header>
@@ -16,7 +15,22 @@
 <main>
 <ul class="index-details">
     <% artists.forEach(function(eachArtist) { %>
-        <li><a href="/artists/<%= eachArtist._id %>"><br><img class="index-photo" width="400" height="270" src="<%= eachArtist.url%>"><br><%= eachArtist.city %></a></li>
+        <li><a href="/artists/<%= eachArtist._id %>"><br>
+        <div class="flip-card">
+        <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img class="index-photo" width="400" height="270" src="<%= eachArtist.url%>"><br>
+        </div>
+        <div class="flip-card-back">
+        <h1><%= eachArtist.alias %></h1> 
+        <p><%= eachArtist.bio %></p> 
+        <p><%= eachArtist.genre %></p>
+        <p><%= eachArtist.city %></p>
+        <p>Click to check out a live video!</p>
+        </div>
+        </div>
+        </div>
+
   <%  }) %>
 
 </ul>

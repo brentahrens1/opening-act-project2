@@ -8,7 +8,6 @@ const bcrypt  = require('bcryptjs');
  
 router.get('/', (req, res) => {
     Artist.find({}, (err, allArtist) => {
-        console.log(allArtist)
         if(err) {
             res.send(arr);
         } else {
@@ -72,10 +71,12 @@ router.get('/:id', (req, res) => {
         if(err) {
             res.send(err);
         } else {
+            console.log(req.session.userId, foundArtist._id)
             res.render('../views/artists/show.ejs', 
             {
                 artist: foundArtist,
-                loggedUserName: req.session.username
+                loggedUserName: req.session.username,
+                loggedUserId: req.session.userId
             }); 
             
         }
@@ -89,6 +90,7 @@ router.delete('/:id', (req, res) => {
         if(err) {
             res.send(err); 
         } else {
+            console.log(deletedArtist)
             res.redirect('/artists'); 
         }
     })
