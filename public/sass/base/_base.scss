@@ -187,6 +187,22 @@ select {
     
 }
 
+.venue-show-info-font {
+    font-size: 2rem; 
+}
+
+.venue-flex-show {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+}
+
+.venue-info-column {
+    display: flex; 
+    flex-direction: column; 
+}
+
 .login-flex {
     display:flex; 
     justify-content: center; 
@@ -206,6 +222,7 @@ select {
 
 .input-style {
     width: 18rem; 
+    padding: .5rem; 
     height: 3.5rem; 
     border: 0px solid black;
     border-radius: 2%; 

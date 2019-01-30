@@ -14,23 +14,28 @@
 </header>
 
 <main>
-    <div class="show-profile2">
-        <h1><%= venue.name %></h1><br>
-        <img  class="show-radius" width="400" height="250" src="<%= venue.url%>"><br>
-    </div>
-    <div class="show-info">
+    <div class="venue-flex-show">
+    <div class='venue-info-column'>
+        <h1><%= venue.username %></h1><br>
+        <h2 class=venue-show-info-font>
         Info:<%= venue.gigInfo %><br>
         Address:<%= venue.address %><br>
         Pay:<%= venue.pay %><br>
+        City: <%= venue.city %>
+        </h2>
+    </div>
+        <img  class="show-radius" src="<%= venue.url%>" width="400" height="250"><br>
+    </div>
         <% if (currentUser.username == venue.username) { %> 
-        <div class="btn-center">
+    <div class="venue-show-btn-center">
+        <a href="/venues/<%= venue._id %>/edit"><div class="editBtn"><button class="edit-delete-btn">Edit Profile</button></div></a>
+
             <form action="/venues/<%= venue._id %>?_method=DELETE" method="POST"><br>
             <button class="edit-delete-btn" type="submit">Delete Profile</button>    
         </form><br>
-        
-        <a href="/venues/<%= venue._id %>/edit"><div class="editBtn"><button class="edit-delete-btn">Edit Profile</button></div></a>
-        <%}%>
-        </div>
+    </div>
+                <%}%> 
+
     </main>
 
 
@@ -40,3 +45,4 @@
 
 
 <%- include('../partials/footer') %>
+

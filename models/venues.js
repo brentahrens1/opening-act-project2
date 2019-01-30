@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const venueSchema = new mongoose.Schema({
     username: {type: String},
     password: {type: String},
-    name: {type: String},
+    city: {type: String},
     url: {type:String},
     instagram: {type:String},
     twitter: {type:String},

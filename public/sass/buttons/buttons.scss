@@ -46,6 +46,20 @@ button:active {
     color: black;
 }
 
+.venue-show-btn-center {
+    margin-left: 62rem;
+    margin-top: 9rem;
+}
+
+.center-e-btn{
+    margin-right: 2rem; 
+}
+
+.show-btn-column {
+    display: flex; 
+    flex-direction: column; 
+}
+
 .home-btn:hover {
     transform: translateY(-.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
