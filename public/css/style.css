@@ -39,8 +39,7 @@ h5 {
 
 .nav-list:hover {
   opacity: .6;
-  border-radius: 5%;
-  text-decoration: underline; }
+  border-radius: 5%; }
 
 .nav-list {
   padding: 5px;
@@ -68,18 +67,15 @@ a:visited {
   justify-content: space-evenly; }
 
 .index-details:visited {
-  color: black; }
-
-.new-form {
-  font-size: 1.5rem; }
+  color: #000; }
 
 .index-photo {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 2%;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
 .show-radius {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 2%;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
@@ -121,20 +117,8 @@ a:visited {
   font-family: 'Alfa Slab One', cursive;
   text-shadow: -0.3rem 0.7rem rgba(0, 0, 0, 0.3); }
 
-input {
-  opacity: .8;
-  color: black;
-  font-size: 1.5rem;
-  outline: none; }
-
-textarea {
-  opacity: .6;
-  color: black;
-  font-size: 1.5rem;
-  outline: none; }
-
 select {
-  width: 110px; }
+  width: 11rem; }
 
 .show-profile {
   display: flex;
@@ -148,10 +132,6 @@ select {
   flex-direction: row;
   justify-content: space-around;
   margin-right: 18.7rem; }
-
-.edit-delete-btn {
-  width: 14rem;
-  height: 4rem; }
 
 .venue-show-info-font {
   font-size: 2rem; }
@@ -181,43 +161,11 @@ select {
   align-items: center;
   margin-top: 10rem; }
 
-.input-style {
-  width: 18rem;
-  padding: .5rem;
-  height: 3.5rem;
-  border: 0px solid black;
-  border-radius: 2%; }
-
-.login-btn {
-  width: 14rem;
-  margin-left: 2rem; }
-
 .show-info-up {
   margin-top: -10rem; }
 
 .select-menu {
   margin-left: 3rem; }
-
-.input-border-box {
-  border: .1rem solid black;
-  border-radius: 1%;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 5rem; }
-
-.login-head {
-  margin-left: 1.5rem;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; }
-
-.signup-head {
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; }
-
-.signup-btn {
-  margin-left: 2.2rem;
-  width: 13rem; }
 
 .select-signup {
   margin-right: 4rem; }
@@ -279,13 +227,13 @@ select {
 
 .flip-card-front {
   background-color: #bbb;
-  color: black;
+  color: #000;
   border-radius: 2%;
   z-index: 2; }
 
 .flip-card-back {
   background-color: #297fb985;
-  color: white;
+  color: #fff;
   transform: rotateY(180deg);
   border-radius: 2%;
   z-index: 1; }
@@ -295,7 +243,7 @@ select {
   flex-direction: row; }
 
 button {
-  color: black;
+  color: #000;
   width: 10rem;
   height: 3rem;
   border-radius: 10rem;
@@ -317,13 +265,13 @@ button:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .home-btn {
-  color: black;
+  color: #000;
   padding: .5rem;
   width: 13rem;
   height: 4rem;
   border-radius: 10rem;
   font-size: 1.5rem;
-  border: 1px solid black;
+  border: 1px solid #000;
   box-shadow: -0.3rem 0.3rem 1.5rem rgba(0, 0, 0, 0.3);
   text-align: center;
   animation: moveInBottom .5s ease-out .75s;
@@ -332,7 +280,7 @@ button:active {
 
 .book-it {
   font-size: 2rem;
-  border: .2rem solid #fff;
+  border: 0.2rem solid #fff;
   padding: 1.5rem;
   border-radius: 4%;
   background: none;
@@ -366,7 +314,7 @@ button:active {
   transition: all 0.3s; }
 
 .lets-collab {
-  border: .2rem solid #fff;
+  border: 0.2rem solid #fff;
   border-radius: 4%;
   padding: 1.5rem;
   width: 16rem;
@@ -402,7 +350,7 @@ button:active {
   transition: all 0.3s; }
 
 .signup-login-after:visited {
-  color: black; }
+  color: #000; }
 
 .venue-show-btn-center {
   margin-left: 62rem;
@@ -430,3 +378,54 @@ button:active {
   align-items: center;
   margin-right: 2rem;
   margin-top: 11rem; }
+
+.login-btn {
+  width: 14rem;
+  margin-left: 2rem; }
+
+.signup-btn {
+  margin-left: 2.2rem;
+  width: 13rem; }
+
+.edit-delete-btn {
+  width: 14rem;
+  height: 4rem; }
+
+.input-style {
+  width: 18rem;
+  padding: .5rem;
+  height: 3.5rem;
+  border: 0px solid #000;
+  border-radius: 2%; }
+
+.input-border-box {
+  border: 0.1rem solid #000;
+  border-radius: 1%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5rem; }
+
+.login-head {
+  margin-left: 1.5rem;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
+
+.signup-head {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
+
+input {
+  opacity: .8;
+  color: #000;
+  font-size: 1.5rem;
+  outline: none; }
+
+textarea {
+  opacity: .6;
+  color: #000;
+  font-size: 1.5rem;
+  outline: none; }
+
+.new-form {
+  font-size: 1.5rem; }

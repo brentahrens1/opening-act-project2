@@ -1,13 +1,16 @@
+$main-font-color: #fff; 
+$second-font-color: #000; 
+
 .input-style {
     width: 18rem; 
     padding: .5rem; 
     height: 3.5rem; 
-    border: 0px solid black;
+    border: 0px solid $second-font-color;
     border-radius: 2%; 
 }
 
 .input-border-box {
-    border: .1rem solid black; 
+    border: .1rem solid $second-font-color; 
     border-radius: 1%; 
     background-color: rgba(0, 0, 0, 0.3); 
     padding: 5rem; 
@@ -28,14 +31,14 @@
 
 input {
     opacity: .8;
-    color: black; 
+    color: $second-font-color; 
     font-size: 1.5rem; 
     outline: none; 
 }
 
 textarea {
     opacity: .6;
-    color: black; 
+    color: $second-font-color; 
     font-size: 1.5rem; 
     outline: none; 
 }

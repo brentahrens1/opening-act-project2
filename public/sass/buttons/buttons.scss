@@ -1,10 +1,13 @@
+$main-font-color: #fff; 
+$second-font-color: #000; 
+
 .info-btns {
     display: flex; 
     flex-direction: row; 
 }
 
 button{
-    color: black; 
+    color: $second-font-color;  
     width: 10rem; 
     height: 3rem; 
     border-radius: 10rem; 
@@ -28,13 +31,13 @@ button:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .home-btn {
-    color: black; 
+    color: $second-font-color; 
     padding: .5rem; 
     width: 13rem; 
     height: 4rem; 
     border-radius: 10rem; 
     font-size: 1.5rem;
-    border: 1px solid black; 
+    border: 1px solid $second-font-color; 
     box-shadow:  -.3rem .3rem 1.5rem rgba(0,0,0,.3);
     text-align: center;
     animation: moveInBottom .5s ease-out .75s;
@@ -44,7 +47,7 @@ button:active {
 
 .book-it {
     font-size: 2rem; 
-    border: .2rem solid #fff; 
+    border: .2rem solid $main-font-color; 
     padding: 1.5rem; 
     border-radius: 4%;
     background: none;
@@ -53,12 +56,12 @@ button:active {
 }
 
 .book-it:hover {
-    color: #000;
+    color: $second-font-color;
   }
 
 .book-it::before,
 .book-it::after {
-  background: #fff;
+  background: $main-font-color;
   content: '';
   position: absolute;
   z-index: -1;
@@ -77,14 +80,14 @@ button:active {
 
 .book-it,
 .book-it::after {
-  -webkit-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
+    -o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
 .lets-collab {
-    border: .2rem solid #fff; 
+    border: .2rem solid $main-font-color; 
     border-radius: 4%; 
     padding: 1.5rem; 
     width: 16rem; 
@@ -94,12 +97,12 @@ button:active {
 }
 
 .lets-collab:hover {
-    color: #000;
+    color: $second-font-color;
   }
 
 .lets-collab::before,
 .lets-collab::after {
-  background: #fff;
+  background: $main-font-color;
   content: '';
   position: absolute;
   z-index: -1;
@@ -126,7 +129,7 @@ button:active {
 }
 
 .signup-login-after:visited {
-    color: black;
+    color: $second-font-color;
 }
 
 .venue-show-btn-center {
