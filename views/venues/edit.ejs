@@ -15,19 +15,19 @@
 </header>
 
 <main>
-<div class="edit-flex">
-<form action="/venues/<%= venue._id %>?_method=PUT" method="POST">
-    <input type="text" name="username" value="<%= venue.name %>" placeholder="Venue Name"><br><br>
-    <input type="text" name="url" value="<%= venue.url %>" placeholder="URL"><br><br>
-    <input type="text" name="gigInfo" value="<%= venue.gigInfo %>" placeholder="Gig Info"><br><br>
-    <input type="text" name="address" value="<%= venue.address %>" placeholder="Address"><br><br>
-    <input type="text" name="pay" value="<%= venue.pay %>" placeholder="Pay Amount"><br><br><br>
-    <input type="text" name="city" value="<%= venue.pay %>" placeholder="City"><br><br><br>
-<div class="center-e-btn">
-    <button type="submit">Edit Venue</button>
-</div>
-</form><br>
-</div>
+    <div class="edit-flex">
+    <form action="/venues/<%= venue._id %>?_method=PUT" method="POST">
+        <input type="text" name="username" value="<%= venue.username %>" placeholder="Venue Name"><br><br>
+        <input type="text" name="url" value="<%= venue.url %>" placeholder="URL"><br><br>
+        <input type="text" name="gigInfo" value="<%= venue.gigInfo %>" placeholder="Gig Info"><br><br>
+        <input type="text" name="address" value="<%= venue.address %>" placeholder="Address"><br><br>
+        <input type="text" name="pay" value="<%= venue.pay %>" placeholder="Pay Amount"><br><br><br>
+        <input type="text" name="city" value="<%= venue.city %>" placeholder="City"><br><br><br>
+    <div class="center-e-btn">
+        <button type="submit">Edit Venue</button>
+    </div>
+    </form><br>
+    </div>
 
 </main>
 

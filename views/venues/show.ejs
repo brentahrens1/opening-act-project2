@@ -17,12 +17,18 @@
     <div class="venue-flex-show">
     <div class='venue-info-column'>
         <h1><%= venue.username %></h1><br>
-        <h2 class=venue-show-info-font>
-        Info:<%= venue.gigInfo %><br>
-        Address:<%= venue.address %><br>
-        Pay:<%= venue.pay %><br>
-        City: <%= venue.city %>
-        </h2>
+
+        <address>
+        <div class="font-after">
+            <a class="book-it" href="mailto:<%= venue.email %>">Book it!</a><br><br>
+        </div>
+        </address><br>
+
+            <h2 class=venue-show-info-font>
+                Info:<%= venue.gigInfo %><br>
+                Address:<%= venue.address %><br>
+                Pay:<%= venue.pay %><br>
+            </h2>
     </div>
         <img  class="show-radius" src="<%= venue.url%>" width="400" height="250"><br>
     </div>
@@ -34,7 +40,7 @@
             <button class="edit-delete-btn" type="submit">Delete Profile</button>    
         </form><br>
     </div>
-                <%}%> 
+            <%}%> 
 
     </main>
 

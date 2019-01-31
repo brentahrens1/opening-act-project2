@@ -17,19 +17,29 @@
 <main>
     <div class="show-profile">
     <div class="show-column">
-        <div class="show-info-font">
+    <div class="show-info-font">
         <br>
         <br>
         <br>
-        <h2><%= artist.username %></h2><br>
-        Bio: <%= artist.bio %><br>
-        Instagram: <%= artist.instagram %><br>
-        Twitter: <%= artist.twitter %><br>
-        contact: <%= artist.bookingInfo %><br> 
-        genre: <%= artist.genre %><br>
-        city: <%= artist.city %>
-        </div>
-        </div>
+    <div class="show-info-up">
+         <h2><%= artist.username %></h2><br>
+
+         <address>
+         <div class="font-after">
+             <a class="lets-collab" href="mailto:<%= artist.email %>">Let's Collab!</a><br>
+         </div>
+         </address><br>
+
+            Bio: <%= artist.bio %><br>
+            Instagram: <%= artist.instagram %><br>
+            Twitter: <%= artist.twitter %><br>
+            contact: <%= artist.bookingInfo %><br> 
+            genre: <%= artist.genre %><br>
+            city: <%= artist.city %>
+    </div>
+
+    </div>
+    </div>
         <iframe class="show-radius" width="600" height="400" src="<%=artist.link%>"></iframe><br>
     </div> 
         
@@ -39,7 +49,7 @@
         <form action="/artists/<%= artist._id %>?_method=DELETE" method="POST"><br>
         <button class="edit-delete-btn" type="submit">Delete Profile</button>    
     </form><br>
-    <%}%>
+        <%}%>
     </div>
 </main>
 

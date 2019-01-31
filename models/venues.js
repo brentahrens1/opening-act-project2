@@ -10,6 +10,7 @@ const venueSchema = new mongoose.Schema({
     twitter: {type:String},
     gigInfo: {type: String},
     address: {type: String},
+    email:{type: String},
     pay: String,
     artists: [{type: mongoose.Schema.ObjectId, ref: 'Artist'}],
     accountType: String

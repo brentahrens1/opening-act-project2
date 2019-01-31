@@ -13,7 +13,7 @@ router.post('/registration/:type', async (req, res)=> {
     const newUser = req.body
     newUser.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     newUser.accountType = req.params.type === 'artist' ? 'artist' : 'venue';
-    console.log(req.body)
+    newUser.username = req.body.username.trim()
     newUser.link = req.body.link && convertYouTubeUrl(req.body.link)
     try {
         // create a session
@@ -57,9 +57,9 @@ router.post('/login', async (req, res) => {
     try {
         let loggedUser = "";
         if (req.body.accountType === 'artist') {
-        loggedUser = await Artist.findOne({username: req.body.username});
+            loggedUser = await Artist.findOne({username: req.body.username});
         } else {
-        loggedUser = await Venue.findOne({username: req.body.username});
+            loggedUser = await Venue.findOne({username: req.body.username});
         }
         if (loggedUser) {
             if(bcrypt.compareSync(req.body.password, loggedUser.password)) {

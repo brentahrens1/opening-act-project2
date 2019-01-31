@@ -16,27 +16,26 @@
 
 <main>
 
-<ul class="index-details">
-    <% venues.forEach(function(eachVenue) { %>
-    <li class="bottom"><a href="/venues/<%= eachVenue._id %>"><h2><%= eachVenue.name %></h2><strong><br>
-    <div class="flip-card">
-        <div class="flip-card-inner">
-        <div class="flip-card-front">
-    <img class="index-photo" width="400" height="270" src="<%= eachVenue.url%>"><br>
-    </div>
-    <div class="flip-card-back">
-    <h1><%= eachVenue.username %></h1> 
-    <p><%= eachVenue.gigInfo %></p> 
-    <p><%= eachVenue.address %></p>
-    <p><%= eachVenue.city %></p>
-    <p>Click for more show details!</p>
-    </div>
-    </div>
-    </div>
+    <ul class="index-details">
+        <% venues.forEach(function(eachVenue) { %>
+            <li class="bottom"><a href="/venues/<%= eachVenue._id %>"><h2><%= eachVenue.name %></h2><strong><br>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+            <img class="index-photo" width="400" height="270" src="<%= eachVenue.url%>"><br>
+        </div>
+        <div class="flip-card-back">
+            <h1><%= eachVenue.username %></h1> 
+            <p><%= eachVenue.gigInfo %></p> 
+            <p><%= eachVenue.city %></p>
+            <p>Click for more show details!</p>
+        </div>
+        </div>
+        </div>
 
-  <%  }) %>
+        <%  }) %>
 
-</ul>
+    </ul>
 
 
 </main>

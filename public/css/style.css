@@ -191,6 +191,9 @@ select {
   width: 14rem;
   margin-left: 2rem; }
 
+.show-info-up {
+  margin-top: -10rem; }
+
 .select-menu {
   margin-left: 3rem; }
 
@@ -326,6 +329,21 @@ button:active {
   animation-fill-mode: backwards;
   outline: none; }
 
+.book-it {
+  font-size: 2rem;
+  border: .2rem solid #fff;
+  padding: 1.5rem;
+  border-radius: 4%; }
+
+.book-it:hover {
+  color: black; }
+
+.lets-collab {
+  border: .2rem solid #fff;
+  border-radius: 4%;
+  padding: 1.5rem;
+  width: 16rem; }
+
 .signup-login-after:visited {
   color: black; }
 
@@ -354,4 +372,7 @@ button:active {
   flex-direction: column;
   align-items: center;
   margin-right: 2rem;
-  margin-top: 8rem; }
+  margin-top: 11rem; }
+
+.lets-collab:hover {
+  color: black; }

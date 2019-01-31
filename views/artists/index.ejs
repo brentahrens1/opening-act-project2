@@ -16,26 +16,26 @@
 
 <main>
     <ul class="index-details">
-    <% artists.forEach(function(eachArtist) { %>
-        <li><a href="/artists/<%= eachArtist._id %>"><br>
+        <% artists.forEach(function(eachArtist) { %>
+            <li><a href="/artists/<%= eachArtist._id %>"><br>
         <div class="flip-card">
         <div class="flip-card-inner">
         <div class="flip-card-front">
-        <img class="index-photo" width="400" height="270" src="<%= eachArtist.url%>"><br>
+            <img class="index-photo" width="400" height="270" src="<%= eachArtist.url%>"><br>
         </div>
         <div class="flip-card-back">
-        <h1><%= eachArtist.username %></h1> 
-        <p><%= eachArtist.bio %></p> 
-        <p><%= eachArtist.genre %></p>
-        <p><%= eachArtist.city %></p>
-        <p>Click to check out a live video!</p>
+            <h1><%= eachArtist.username %></h1> 
+            <p><%= eachArtist.bio %></p> 
+            <p><%= eachArtist.genre %></p>
+            <p><%= eachArtist.city %></p>
+            <p>Click to take a listen and connect!</p>
         </div>
         </div>
         </div>
 
-  <%  }) %>
+        <%  }) %>
 
-</ul>
+    </ul>
 
 </main>
 
