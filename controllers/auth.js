@@ -17,7 +17,7 @@ router.post('/registration/:type', async (req, res)=> {
     newUser.link = req.body.link && convertYouTubeUrl(req.body.link)
     try {
         // create a session
-        req.session.accountType = newUser.accountType; ; 
+        req.session.accountType = newUser.accountType; 
         req.session.logged = true;
         req.session.username = newUser.username;
         req.session.user = newUser

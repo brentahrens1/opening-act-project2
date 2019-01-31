@@ -52,7 +52,12 @@ router.get('/:id/edit', (req, res) => {
 
 //update
 
-router.put('/:id', (req, res) => {
+const convertYouTubeUrl = url =>  `https://www.youtube.com/embed/${url.split('v=')[1]}`
+
+    router.put('/:id', (req, res) => {
+
+        req.body.link = convertYouTubeUrl(req.body.link)
+
     Artist.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateArtist) => {
         if(err) {
             res.send(err); 
