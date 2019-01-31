@@ -1,0 +1,45 @@
+.input-style {
+    width: 18rem; 
+    padding: .5rem; 
+    height: 3.5rem; 
+    border: 0px solid black;
+    border-radius: 2%; 
+}
+
+.input-border-box {
+    border: .1rem solid black; 
+    border-radius: 1%; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    padding: 5rem; 
+}
+
+.login-head {
+    margin-left: 1.5rem; 
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; 
+}
+
+.signup-head {
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; 
+}
+
+input {
+    opacity: .8;
+    color: black; 
+    font-size: 1.5rem; 
+    outline: none; 
+}
+
+textarea {
+    opacity: .6;
+    color: black; 
+    font-size: 1.5rem; 
+    outline: none; 
+}
+
+.new-form {
+    font-size: 1.5rem; 
+}

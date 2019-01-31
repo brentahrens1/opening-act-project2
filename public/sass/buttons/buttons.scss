@@ -47,10 +47,40 @@ button:active {
     border: .2rem solid #fff; 
     padding: 1.5rem; 
     border-radius: 4%;
+    background: none;
+    position: relative;
+    font-weight: 400; 
 }
 
 .book-it:hover {
-    color: black; 
+    color: #000;
+  }
+
+.book-it::before,
+.book-it::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+  
+.book-it::after {
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+.book-it:hover:after {
+    height: 100%;
+  }
+
+.book-it,
+.book-it::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .lets-collab {
@@ -58,6 +88,41 @@ button:active {
     border-radius: 4%; 
     padding: 1.5rem; 
     width: 16rem; 
+    background: none;
+    position: relative;
+    font-weight: 400; 
+}
+
+.lets-collab:hover {
+    color: #000;
+  }
+
+.lets-collab::before,
+.lets-collab::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+  
+  /* BUTTON 1 */
+.lets-collab::after {
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+.lets-collab:hover:after {
+    height: 100%;
+  }
+
+.lets-collab,
+.lets-collab::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .signup-login-after:visited {
@@ -95,6 +160,18 @@ button:active {
     margin-top: 11rem;
 }
 
-.lets-collab:hover {
-    color: black; 
+.login-btn {
+    width: 14rem; 
+    margin-left: 2rem; 
+}
+
+.signup-btn {
+    margin-left: 2.2rem; 
+    width: 13rem; 
+}
+
+.edit-delete-btn {
+    width: 14rem; 
+    height:4rem; 
+    
 }

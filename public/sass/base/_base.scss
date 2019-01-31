@@ -24,7 +24,6 @@ body{
     font-family: 'Cutive', serif;
     background-image: url('../images/venue-first-page.jpeg');
     background-size: cover; 
-
 }
 
 h1 {
@@ -42,6 +41,7 @@ h5 {
     display: flex; 
     justify-content: space-evenly;
     align-items: center; 
+    flex-wrap: wrap;
     list-style-type: none;
     padding: .5rem; 
     margin-bottom: 3rem;  
@@ -50,7 +50,8 @@ h5 {
 .nav-list:hover {
     opacity: .6;
     border-radius:5%; 
-    background-color: #000;
+    
+    text-decoration: underline; 
 }
 
 .nav-list {
@@ -86,11 +87,6 @@ a:visited {
 .index-details:visited {
     color: black; 
 }
-
-.new-form {
-    font-size: 1.5rem; 
-}
-
 .index-photo {
    border: 1px solid black; 
    border-radius: 2%; 
@@ -148,20 +144,6 @@ border: 1px solid black;
     text-shadow: -.3rem .7rem rgba(0,0,0,.3);
 }
 
-input {
-    opacity: .8;
-    color: black; 
-    font-size: 1.5rem; 
-    outline: none; 
-}
-
-textarea {
-    opacity: .6;
-    color: black; 
-    font-size: 1.5rem; 
-    outline: none; 
-}
-
 select {
     width: 110px; 
 }
@@ -179,12 +161,6 @@ select {
     flex-direction: row; 
     justify-content: space-around; 
     margin-right: 18.7rem;
-}
-
-.edit-delete-btn {
-    width: 14rem; 
-    height:4rem; 
-    
 }
 
 .venue-show-info-font {
@@ -220,50 +196,12 @@ select {
     margin-top: 10rem; 
 }
 
-.input-style {
-    width: 18rem; 
-    padding: .5rem; 
-    height: 3.5rem; 
-    border: 0px solid black;
-    border-radius: 2%; 
-}
-
-.login-btn {
-    width: 14rem; 
-    margin-left: 2rem; 
-}
-
 .show-info-up {
     margin-top: -10rem;
 }
 
 .select-menu {
     margin-left: 3rem; 
-}
-
-.input-border-box {
-    border: .1rem solid black; 
-    border-radius: 1%; 
-    background-color: rgba(0, 0, 0, 0.3); 
-    padding: 5rem; 
-}
-
-.login-head {
-    margin-left: 1.5rem; 
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; 
-}
-
-.signup-head {
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; 
-}
-
-.signup-btn {
-    margin-left: 2.2rem; 
-    width: 13rem; 
 }
 
 .select-signup {

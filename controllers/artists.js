@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
             res.send(arr);
         } else {
             res.render('../views/artists/index.ejs', {
-                artists: allArtist //the key becomes a var inside the tempelate
+                artists: allArtist 
             }); 
         }
     }); 
@@ -96,7 +96,7 @@ router.delete('/:id', (req, res) => {
     })
 }); 
 
-//serch 
+//search 
 
 router.post('/search', (req, res) => {
     Artist.find({city: req.body.query}, (err, artists) => {
