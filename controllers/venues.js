@@ -80,7 +80,7 @@ router.get('/:id', (req, res) => {
 //delete
 
 router.delete('/:id', (req, res) => {
-    Venue.findOneAndRemove(req.params.id, (err, deletedVenue) => {
+    Venue.findByIdAndDelete(req.params.id, (err, deletedVenue) => {
         if(err) {
             res.send(err); 
         } else {

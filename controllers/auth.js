@@ -31,8 +31,6 @@ router.post('/registration/:type', async (req, res)=> {
                     res.redirect(`/artists/${createdArtist._id}`)
                 }
             })
-            
-            
         } else {
             // create venue 
             Venue.create(newUser, (err, createdVenue)=> {
