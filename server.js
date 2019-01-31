@@ -1,4 +1,4 @@
-require('./db/db');
+
 const express = require('express'); 
 const app = express(); 
 const bodyParser = require('body-parser'); 
@@ -7,6 +7,8 @@ const artistController = require('./controllers/artists');
 const venueController = require('./controllers/venues');
 const session  = require('express-session');
 const authController = require('./controllers/auth')
+require('dotenv').config(); 
+require('./db/db');
 
 app.set('view engine', 'ejs')
 
