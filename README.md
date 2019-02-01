@@ -20,7 +20,7 @@ I began thinking of a concept for my app that would be important for me. As an a
 
 ![GitHub Logo](https://i.imgur.com/4a9bTma.jpg)
 
-**BIGGEST CHALLENGE -** Making the models work together. Writing code that performs a different function depending on which model is being used.  
+**BIGGEST CHALLENGE -** the authentication. Making the models work together. Writing code that performs a different function depending on which model is being used.  
 
 **FUTURE PLANS -** 
 * Add a playlist for each artist on the profiles. 
