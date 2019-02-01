@@ -6,6 +6,10 @@ $second-font-color: #000;
     flex-direction: row; 
 }
 
+a {
+    color: $second-font-color;
+}
+
 button{
     color: $second-font-color;  
     width: 10rem; 
