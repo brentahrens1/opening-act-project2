@@ -4,6 +4,8 @@ const Artist  = require('../models/artists');
 const Venue   = require('../models/venues');
 const bcrypt  = require('bcryptjs');
 
+
+
 //index 
  
 router.get('/', (req, res) => {
@@ -26,7 +28,8 @@ router.get('/new', (req, res) => {
 
 //create
 
-router.post('/', (req, res) => {
+router.post('/registration/artist', (req, res) => {
+
     Artist.create(req.body, (err, newArtist) => {
         if(err) {
             res.send(err); 
@@ -70,7 +73,7 @@ const convertYouTubeUrl = url =>  `https://www.youtube.com/embed/${url.split('v=
 
 //show
 
-router.get('/:id', (req, res) => {
+router.get('/:id',  (req, res) => {
     Artist.findById(req.params.id, (err, foundArtist) => {
         console.log('this is the art' + foundArtist)
         if(err) {
@@ -96,7 +99,7 @@ router.delete('/:id', (req, res) => {
             res.send(err); 
         } else {
             console.log(deletedArtist)
-            res.redirect('/artists'); 
+            res.redirect('/'); 
         }
     })
 }); 
@@ -110,10 +113,6 @@ router.post('/search', (req, res) => {
         }); 
     })
 })
-
-
-
-
 
 
 

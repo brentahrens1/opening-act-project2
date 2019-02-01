@@ -26,7 +26,10 @@ router.get('/new', (req, res) => {
 
 //create
 
-router.post('/', (req, res) => {
+router.post('/registration/venue', (req, res) => {
+    if(!req.body.url) {
+        req.body.url = 'https://i.pinimg.com/originals/3a/ef/bc/3aefbcb7b8620a31f60b0b25b3e22b00.jpg'; 
+    }
     Venue.create(req.body, (err, newVenue) => {
         if(err) {
             res.send(err); 
@@ -84,7 +87,7 @@ router.delete('/:id', (req, res) => {
         if(err) {
             res.send(err); 
         } else {
-            res.redirect('/venues'); 
+            res.redirect('/'); 
         }
     })
 }); 

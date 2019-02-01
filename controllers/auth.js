@@ -9,12 +9,16 @@ const Venue = require('../models/venues');
 
 const convertYouTubeUrl = url =>  `https://www.youtube.com/embed/${url.split('v=')[1]}`
 
-router.post('/registration/:type', async (req, res)=> {
+router.post('/registration/:type' ,async (req, res)=> {
+    if(!req.body.url){
+        req.body.url ="https://i.pinimg.com/originals/3a/ef/bc/3aefbcb7b8620a31f60b0b25b3e22b00.jpg"
+    }
     const newUser = req.body
     newUser.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     newUser.accountType = req.params.type === 'artist' ? 'artist' : 'venue';
     newUser.username = req.body.username.trim()
     newUser.link = req.body.link && convertYouTubeUrl(req.body.link)
+    
     try {
         // create a session
         req.session.accountType = newUser.accountType; 
