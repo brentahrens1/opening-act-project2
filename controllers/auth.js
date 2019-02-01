@@ -13,6 +13,9 @@ router.post('/registration/:type' ,async (req, res)=> {
     if(!req.body.url){
         req.body.url ="https://i.pinimg.com/originals/3a/ef/bc/3aefbcb7b8620a31f60b0b25b3e22b00.jpg"
     }
+    if(!req.body.link){
+        req.body.link ="https://www.youtube.com/watch?v=Z4Y6RbTq2dk"
+    }
     const newUser = req.body
     newUser.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     newUser.accountType = req.params.type === 'artist' ? 'artist' : 'venue';

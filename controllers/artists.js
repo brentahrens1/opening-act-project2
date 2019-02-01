@@ -57,16 +57,16 @@ router.get('/:id/edit', (req, res) => {
 
 const convertYouTubeUrl = url =>  `https://www.youtube.com/embed/${url.split('v=')[1]}`
 
-    router.put('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
 
-        req.body.link = convertYouTubeUrl(req.body.link)
+    req.body.link.length > 0 ? convertYouTubeUrl(req.body.link) : "https://www.youtube.com/watch?v=Z4Y6RbTq2dk"
 
     Artist.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateArtist) => {
         if(err) {
             res.send(err); 
         } else {
             console.log(updateArtist); 
-            res.redirect('/artists'); 
+            res.redirect(`/artists/${req.params.id}`); 
         }
     })
 }); 
@@ -75,7 +75,6 @@ const convertYouTubeUrl = url =>  `https://www.youtube.com/embed/${url.split('v=
 
 router.get('/:id',  (req, res) => {
     Artist.findById(req.params.id, (err, foundArtist) => {
-        console.log('this is the art' + foundArtist)
         if(err) {
             res.send(err);
         } else {
